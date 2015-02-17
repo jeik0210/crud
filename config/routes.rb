@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
+  get 'artículos' => 'articles#index', as: :articles
   get 'articles/show' => 'articles#show' , as: :show_article
   post 'guardar_articulo' => 'articles#create' , as: :create_article
   get 'nuevo' => 'articles#new', as: :new_article

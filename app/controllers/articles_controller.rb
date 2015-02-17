@@ -8,7 +8,11 @@ class ArticlesController < ApplicationController
   def create
   	@article = Article.new(article_params)
   	@article.save
+    respond_to do |format|
+      format.html { redirect_to articles_path }
+    end
   end
+
   def show
   end
 
