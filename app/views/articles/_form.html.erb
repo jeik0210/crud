@@ -1,9 +1,9 @@
 <%= form_tag(create_article_path , method: 'post') do %>
 	<%= label_tag :titulo, 'titulo'%>
-	<%= text_field_tag :titulo , ''%> <br>
+	<%= text_field :article, :titulo %> <br>
 	<%= label_tag :descripcion, 'descripcion'%>
-	<%= text_field_tag :descripcion, '' %> <br>
+	<%= text_field :article, :descripcion %> <br>
 	<%= label_tag :fecha, 'fecha'%>
-	<%= text_field_tag :fecha ,'' %> <br>
+	<%= text_field :article, :fecha %> <br>
 	<%= submit_tag 'enviar'%>
 <% end %>
